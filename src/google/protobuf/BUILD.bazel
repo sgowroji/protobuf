@@ -317,6 +317,7 @@ cc_library(
     hdrs = [
         "arena.h",
         "arenaz_sampler.h",
+        "prefetcher.h",
         "serial_arena.h",
         "thread_safe_arena.h",
     ],
@@ -405,6 +406,7 @@ cc_library(
         "metadata_lite.h",
         "parse_context.h",
         "port.h",
+        "prefetcher.h",
         "raw_ptr.h",
         "repeated_field.h",
         "repeated_ptr_field.h",
