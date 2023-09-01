@@ -56,6 +56,7 @@
 #include "google/protobuf/dynamic_message.h"
 #include "google/protobuf/io/printer.h"
 #include "google/protobuf/io/zero_copy_stream.h"
+#include "google/protobuf/versions.h"
 
 // Must be last.
 #include "google/protobuf/port_def.inc"
@@ -267,6 +268,8 @@ void FileGenerator::Generate(io::Printer* printer) {
       "// source: $filename$\n"
       "\n",
       "filename", file_->name());
+  printer->Print("Protobuf Java Version: $protobuf_java_version$",
+                 "protobuf_java_version", kProtoJavaVersionString);
   if (!java_package_.empty()) {
     printer->Print(
         "package $package$;\n"
